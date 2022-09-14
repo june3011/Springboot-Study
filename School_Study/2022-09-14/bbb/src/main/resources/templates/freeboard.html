@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="common::head"></div>
+<div class="container">
+    <h1>freeboard</h1>
+    <table class="table">
+        <thead>
+            <tr><th>aa</th><th>bb</th></tr>
+        </thead>
+        <tbody>
+            <tr th:each="test:${list}">
+                <td>[[${test.aa}]]</td>
+                <td>[[${test.bb}]]</td>
+            </tr>
+        </tbody>
+    </table>
+
+<!--    <div th:text="${list}"></div>-->
+    <div th:each="test:${list}">
+        <table>
+            <tr>
+                <td>[[${test.aa}]]</td>
+                <td>[[${test.bb}]]</td>
+            </tr>
+        </table>
+    </div>
+    <div th:text="${aaa}"></div>
+</div>
+<div th:replace="common::foot"></div>
+</body>
+</html>
